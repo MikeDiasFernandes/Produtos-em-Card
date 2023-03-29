@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    background: #2c3e50;
+    width: 400px;
+    padding: 40px 40px 0 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1111;
+    transition: 0.3s;
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+    margin: 0 20px;
+}
+
+.container:hover{
+    padding-bottom: 40px;
+}
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    transform: translateZ(50px);
+}
+
+img{
+    position: absolute;
+    height: 100% 15px;
+    width: 105%;
+    transform: scale(0.7) ;
+    transition: 0.3s ease-in;
+    object-fit: cover;
+    bottom: 20px;
+}
+
+.object{
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(#ff0000, tomato);
+    border-radius: 50%;
+    top: 5%;
+    left: 27%;
+    transition: 0.3s ease-in;
+}
+
+.container:hover .object{
+    width: 190px;
+    height: 190px;
+}
+
+.container:hover .imgbox img{
+    transform: scale(0.7);
+}
+
+.bgtext{
+    position: absolute;
+    font-size: 8em;
+    font-weight: 800;
+    top: 50%;
+    -webkit-text-stroke: 1px #fff;
+    opacity: 0.4;
+    color: transparent;
+    z-index: -1;
+}
+
+.title{
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    word-spacing: 2px;
+    transition: 0.3s ease;
+    transform: translateZ(50px);
+}
+
+.container:hover .title{
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+.buySection{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    overflow: hidden;
+    transform: all 0.3s;
+    transform: translateZ(50px);
+}
+
+.buySection h2{
+    font-size: 1.6em;
+    color: #fff;
+    transition: 0.3s;
+    transform: translateY(100px);
+    margin-left: 19px;
+}
+
+.buySection sup{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.buySection span{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.buySection button{
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+    transform: translateY(100px);
+}
+
+.container:hover .buySection{
+    margin-top: 30px;
+}
+
+.container:hover .buySection h2{
+    transition-delay: 0.2s;
+    transform: translateY(0);
+
+}
+
+.container:hover .buySection button{
+    transition-delay: 0.4s;
+    transform: translateY(0);
+}
+
+.img1,.objblue{
+    filter: hue-rotate(230deg);
+}
+
+.img3,.objviolet{
+    filter: hue-rotate(290deg);
+}
+
+.bluebtn{
+    background: #4a6eee;
+}
+
+.redbtn{
+    background: #f13f3f;
+}
+
+.violetbtn{
+    background: #b458ee;
+}
+
+.bgposter{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background: url(/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
